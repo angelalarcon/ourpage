@@ -1,0 +1,162 @@
+html,
+body {
+	height: 100%;
+	background-color: #333;
+}
+
+#carousel-rsdev {
+	height: 100%;
+}
+
+#carousel-rsdev .carousel-inner{
+	height: 100%;
+	position: relative;
+}
+
+#carousel-rsdev .item {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	-webkit-transition: all 0s;
+	-moz-transition: all 0s;
+	-ms-transition: all 0s;
+	-o-transition: all 0s;
+	transition: all 0s;
+	display: block;
+	z-index: 1;
+}
+
+#carousel-rsdev .item.active {
+	z-index: 2;
+}
+
+#carousel-rsdev .item.active.right,
+#carousel-rsdev .item.next,
+#carousel-rsdev .item.active.left,
+#carousel-rsdev .item.prev,
+#carousel-rsdev .next.left,
+#carousel-rsdev .prev.right {
+	top: 0;
+	transform: translate3d(0, 0, 0);
+}
+
+#carousel-rsdev .item section {
+	height: 100%;
+	float: left;
+	transition: all 0.4s;
+	overflow: hidden;
+	background-color: #333;
+}
+
+#carousel-rsdev .item section img {
+	height: 100%;
+	width: auto;
+	position: relative;
+	left: 50%;
+	transform: translateX(-50%);
+}
+
+#carousel-rsdev .item section.col-half {
+	width: 50%;
+}
+
+#carousel-rsdev .item section.col-third {
+	width: 33.33333333333%;
+}
+
+#carousel-rsdev .item section:nth-child(1) {
+	transform: translateY(-100%);
+}
+
+#carousel-rsdev .item section:nth-child(2) {
+	transform: translateY(100%);
+}
+
+#carousel-rsdev .item section:nth-child(3) {
+	transform: translateY(-100%);
+}
+
+#carousel-rsdev .item.active section:nth-child(1),
+#carousel-rsdev .item.active section:nth-child(2),
+#carousel-rsdev .item.active section:nth-child(3) {
+	transform: translateY(0);
+}
+
+#carousel-rsdev .carousel-indicators,
+#carousel-rsdev .carousel-control {
+	z-index: 3;	
+}
+
+#carousel-rsdev .carousel-indicators {
+	position: relative;
+	left: initial;
+	bottom: initial;
+	top: 50%;
+	width: 40vw;
+	height: 40vw;
+	margin: 0 auto;
+	transform: rotate(-90deg) translateX(50%);
+	transform-origin: top;
+}
+
+#carousel-rsdev.carousel .carousel-indicators li {
+	position: absolute;
+	width: 100%;
+	height: 20px;
+	left: 0;
+	top: 0;
+	border: none;
+	background: none;
+	margin: 0;
+	border-radius: 0;
+	transform-origin: left;
+	cursor: initial;
+}
+
+#carousel-rsdev .carousel-indicators li span {
+	width: 20px;
+	height: 20px;
+	border: 1px solid #fff;
+	border-radius: 50%;
+	margin: auto;
+	display: block;
+	position: relative;
+	z-index: 999;
+	cursor: pointer;
+}
+
+#carousel-rsdev .carousel-indicators li.active span {
+	background-color: #fff;
+}
+
+#carousel-rsdev.carousel .carousel-indicators li:nth-child(2) {
+	transform: rotate(72deg);
+}
+
+#carousel-rsdev.carousel .carousel-indicators li:nth-child(3) {
+	transform: rotate(144deg);
+}
+
+#carousel-rsdev.carousel .carousel-indicators li:nth-child(4) {
+	transform: rotate(216deg);
+}
+
+#carousel-rsdev.carousel .carousel-indicators li:nth-child(5) {
+	transform: rotate(288deg);
+}
+
+#carousel-rsdev .carousel-control {
+	width: 80px;
+	height: 80px;
+	top: 50%;
+	transform: translateY(-50%);
+	background: #000;
+}
+
+#carousel-rsdev .carousel-control span {
+	transform: translateY(-50%);
+	top: 50%;
+	margin: 0;
+}
